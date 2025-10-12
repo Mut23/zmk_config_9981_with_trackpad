@@ -59,6 +59,7 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &bt BT_SEL 1>,<&macro_tap &to DEFAULT>;
         }; 
+        };
 
     behaviors {
         td_boot_out: td_boot_out {
@@ -168,4 +169,5 @@
         };
     };
 };
+
 
