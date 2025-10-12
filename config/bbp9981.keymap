@@ -46,16 +46,6 @@
         };
     };
 
-   //切换蓝牙设备
-    behaviors {
-        btswitch: tap_dance_btswitch {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <400>;
-            bindings = <&tobt0>, <&tobt1>;
-        };
-    };
-
     macros {
         //切换设备1
         tobt0: zed_em_tobt0 {
@@ -72,12 +62,13 @@
         }; 
         };
 
+   //切换蓝牙设备
     behaviors {
-        td_boot_out: td_boot_out {
+        btswitch: tap_dance_btswitch {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;           
-            bindings = <&bootloader>, <&out OUT_TOG>;
+            tapping-term-ms = <400>;
+            bindings = <&tobt0>, <&tobt1>;
         };
     };
 
@@ -87,15 +78,6 @@
             #binding-cells = <0>;
             tapping-term-ms = <400>;
             bindings = <&kp SEMI>, <&to SYM>;
-        };
-    };
-
-    behaviors {
-        tdc_to_MEDIA: td_mute_to_layer {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <400>;
-            bindings = <&kp C_MUTE>, <&to MEDIA>;
         };
     };
 
@@ -180,6 +162,7 @@
         };
     };
 };
+
 
 
 
