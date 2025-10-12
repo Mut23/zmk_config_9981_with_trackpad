@@ -46,14 +46,14 @@
     };
 
     macros {
-        //切换设备1
+        //切换设备0
         tobt0: zed_em_tobt0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &bt BT_SEL 0>,<&macro_tap &kp ENTER &kp N0 &kp N9 &kp N1 &kp N1 &kp ENTER>,<&macro_tap &to DEFAULT>;
         };
 
-        //切换设备2
+        //切换设备1
         tobt1: zed_em_tobt1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -168,4 +168,5 @@
         };
     };
 };
+
 
