@@ -41,11 +41,29 @@
             bindings = <&macro_tap &bt BT_SEL 1>,<&macro_tap &to DEFAULT>;
         }; 
 
+        //关闭app1
+        tocloseapp1: zed_em_closeapp1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp F4>,<&macro_tap &kp E>;
+        }; 
         //关闭app2
         tocloseapp2: zed_em_closeapp2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp F4>,<&macro_tap &kp E>;
+            bindings = <&macro_tap &kp F4>,<&macro_tap &kp R>;
+        }; 
+        //关闭app3
+        tocloseapp3: zed_em_closeapp3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp F4>,<&macro_tap &kp D>;
+        }; 
+        //关闭app4
+        tocloseapp4: zed_em_closeapp4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp F4>,<&macro_tap &kp F>;
         }; 
         };
 
@@ -129,14 +147,15 @@
             bindings = <
                  &none                                                                                       &none
     &kp LC(T)            &kp LC(R)                             &mkp LCLK                              &kp LC(W)                     &kp LA(F4)
-    &none        &kp UP     &tocloseapp2       &none           &none             &none            &none            &none          &none         &none
-    &kp LEFT     &kp DOWN   &kp RIGHT   &kp LA(RIGHT)   &kp BSLH          &none            &none            &none          &none         &kp DEL
+    &kp UP       &kp DOWN     &tocloseapp1     &tocloseapp2           &none             &none            &none            &none          &none         &none
+    &kp LEFT     &kp RIGHT    &tocloseapp3     &tocloseapp4           &kp BSLH          &none            &none            &none          &none         &kp DEL
     &kp LSHFT    &none      &none       &none           &none             &kp LA(LEFT)     &none            &none          &none         &none
     &kp LCTRL               &kp LALT                                 &btswitch                        &to DEFAULT                      &to DEFAULT
             >;
         };
     };
 };
+
 
 
 
