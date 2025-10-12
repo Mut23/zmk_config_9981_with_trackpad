@@ -40,6 +40,13 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &bt BT_SEL 1>,<&macro_tap &to DEFAULT>;
         }; 
+
+        //关闭app2
+        tocloseapp2: zed_em_closeapp2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp F4>,<&macro_tap &kp E>;
+        }; 
         };
 
    //切换蓝牙设备
@@ -122,7 +129,7 @@
             bindings = <
                  &none                                                                                       &none
     &kp LC(T)            &kp LC(R)                             &mkp LCLK                              &kp LC(W)                     &kp LA(F4)
-    &none        &kp UP     &none       &none           &none             &none            &none            &none          &none         &none
+    &none        &kp UP     &tocloseapp2       &none           &none             &none            &none            &none          &none         &none
     &kp LEFT     &kp DOWN   &kp RIGHT   &kp LA(RIGHT)   &kp BSLH          &none            &none            &none          &none         &kp DEL
     &kp LSHFT    &none      &none       &none           &none             &kp LA(LEFT)     &none            &none          &none         &none
     &kp LCTRL               &kp LALT                                 &btswitch                        &to DEFAULT                      &to DEFAULT
@@ -130,6 +137,7 @@
         };
     };
 };
+
 
 
 
