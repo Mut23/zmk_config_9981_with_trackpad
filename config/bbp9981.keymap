@@ -65,6 +65,7 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp F4>,<&macro_tap &kp F>,<&macro_release &kp F4>;
         }; 
+
         //打开appT
         toopenappT: zed_em_toopenappT {
             compatible = "zmk,behavior-macro";
@@ -89,6 +90,20 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp TAB>,<&macro_tap &kp X>,<&macro_release &kp TAB>;
         };
+
+        //点击文字输入框
+        totapinputbar: zed_em_totapinputbar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp TAB>,<&macro_tap &kp ENTER>,<&macro_release &kp TAB>;
+        };
+        //点击发送按钮
+        totapsentbutton: zed_em_totapsentbutton {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F4>,<&macro_tap &kp ENTER>,<&macro_release &kp F4>;
+        };
+
         };
 
    //切换蓝牙设备
@@ -161,7 +176,7 @@
     &kp LC(A)               &kp LC(C)                     &mkp LCLK                          &kp LC(X)                            &kp LC(V) 
     &kp HASH     &kp N1     &kp N2      &kp N3    &mt LBKT LPAR &mt RBKT RPAR     &kp UNDER        &kp MINUS        &kp PLUS         &kp AT
     &kp STAR     &kp N4     &kp N5      &kp N6    &kp SLASH     &kp COLON         &kp SEMI         &kp APOS         &kp DQT          &kp BSPC
-    &kp LSHFT    &kp N7     &kp N8      &kp N9    &kp QMARK     &kp EXCL          &kp COMMA        &kp DOT          &mt C_MUTE DLLR  &kp ENTER
+    &kp LSHFT    &kp N7     &kp N8      &kp N9    &kp QMARK     &kp EXCL          &kp COMMA        &kp DOT          &mt C_MUTE DLLR  &totapinputbar
     &kp LCTRL               &kp N0                              &kp SPACE                          &to DEFAULT                       &sl_mo 2 2
             >;
         };
@@ -173,12 +188,13 @@
     &kp LC(T)            &kp LC(R)                             &btswitch                              &kp LC(W)                     &kp LA(F4)
     &kp UP       &kp DOWN     &tocloseapp1     &tocloseapp2           &toopenappT             &toopenappY            &toopenappU            &none          &none         &none
     &kp LEFT     &kp RIGHT    &tocloseapp3     &tocloseapp4           &kp BSLH          &none            &none            &none          &none         &kp DEL
-    &kp LSHFT    &none      &toopenappX       &none           &none             &none     &none            &none          &none         &none
+    &kp LSHFT    &none      &toopenappX       &none           &none             &none     &none            &none          &none         &totapsentbutton
     &kp LCTRL               &kp LALT                                 &kp SPACE                        &to DEFAULT                      &to DEFAULT
             >;
         };
     };
 };
+
 
 
 
