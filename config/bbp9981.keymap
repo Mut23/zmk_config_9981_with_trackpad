@@ -223,12 +223,13 @@
     &kp LC(T)            &kp LC(R)                             &btswitch                              &kp LC(W)                     &kp LA(F4)
     &kp UP       &kp DOWN     &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &totaptopmsg   &totapinnermsg         &none
     &kp LEFT     &kp RIGHT    &tocloseapp3     &tocloseapp4           &none               &none            &none            &totapfirst    &totapthird   &kp DEL
-    &kp LSHFT    &none        &toopenappX      &none                  &none               &none            &none            &none          &msc CLCK     &totapsentbutton
+    &kp LSHFT    &none        &toopenappX      &none                  &none               &none            &none            &none          &mkp CLCK     &totapsentbutton
     &kp LCTRL               &kp LALT                                 &toscrolldown                        &to DEFAULT                      &to DEFAULT
             >;
         };
     };
 };
+
 
 
 
