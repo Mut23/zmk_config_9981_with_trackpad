@@ -133,7 +133,7 @@
 
             bindings = <
                  &kp LA(LEFT)                                                                                       &kp LA(RIGHT)
-    &kp LC(T)            &kp LC(R)                             &btswitch                              &KP LC(W)                     &kp LA(F4)
+    &kp LC(T)            &kp LC(R)                             &none                              &KP LC(W)                     &kp LA(F4)
     &none        &kp UP     &none       &none           &none             &none            &none            &none          &none         &none
     &kp LEFT     &kp DOWN   &kp RIGHT   &none           &kp BSLH          &none            &none            &none          &none         &kp DEL
     &kp LSHFT    &none      &none       &none           &none             &none            &none            &none          &none         &none
@@ -154,6 +154,7 @@
         };
     };
 };
+
 
 
 
