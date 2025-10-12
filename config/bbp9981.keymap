@@ -147,8 +147,8 @@
         upper_layer {
 
             bindings = <
-                 &msc SCRL_UP                                                                                       &msc SCRL_DOWN
-    &tobt0            &tobt0                             &mkp LCLK                              &none                     &none
+                 &kp K_SCROLL_UP                                                                                       &kp K_SCROLL_DOWN
+    &tobt0            &tobt1                             &mkp LCLK                              &none                     &none
     &none        &kp UP     &none       &none           &none             &none            &none            &none          &none         &none
     &kp LEFT     &kp DOWN   &kp RIGHT   &none           &kp BSLH          &none            &none            &none          &none         &kp DEL
     &kp LSHFT    &none      &none       &none           &none             &none            &none            &none          &none         &none
@@ -169,5 +169,6 @@
         };
     };
 };
+
 
 
