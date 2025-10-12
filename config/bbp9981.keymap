@@ -26,14 +26,6 @@
     };
 
 / {
-    behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <400>;
-            bindings = <&mkp LCLK>, <&bt BT_CLR>;
-        };
-    };
 
    //单击层1字符，长按层2字符
     behaviors {
@@ -162,6 +154,7 @@
         };
     };
 };
+
 
 
 
