@@ -65,6 +65,30 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp F4>,<&macro_tap &kp F>,<&macro_release &kp F4>;
         }; 
+        //打开appT
+        toopenappT: zed_em_toopenappT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp TAB>,<&macro_tap &kp T>,<&macro_release &kp TAB>;
+        }; 
+        //打开appY
+        toopenappY: zed_em_toopenappY {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp TAB>,<&macro_tap &kp Y>,<&macro_release &kp TAB>;
+        };
+        //打开appU
+        toopenappU: zed_em_toopenappU {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp TAB>,<&macro_tap &kp U>,<&macro_release &kp TAB>;
+        };
+        //打开appX
+        toopenappT: zed_em_toopenappX {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp TAB>,<&macro_tap &kp X>,<&macro_release &kp TAB>;
+        };
         };
 
    //切换蓝牙设备
@@ -147,14 +171,15 @@
             bindings = <
                  &kp LA(LEFT)                                                                                       &kp LA(RIGHT)
     &kp LC(T)            &kp LC(R)                             &btswitch                              &kp LC(W)                     &kp LA(F4)
-    &kp UP       &kp DOWN     &tocloseapp1     &tocloseapp2           &none             &none            &none            &none          &none         &none
+    &kp UP       &kp DOWN     &tocloseapp1     &tocloseapp2           &toopenappT             &toopenappY            &toopenappU            &none          &none         &none
     &kp LEFT     &kp RIGHT    &tocloseapp3     &tocloseapp4           &kp BSLH          &none            &none            &none          &none         &kp DEL
-    &kp LSHFT    &none      &none       &none           &none             &none     &none            &none          &none         &none
+    &kp LSHFT    &none      &toopenappX       &none           &none             &none     &none            &none          &none         &none
     &kp LCTRL               &kp LALT                                 &kp SPACE                        &to DEFAULT                      &to DEFAULT
             >;
         };
     };
 };
+
 
 
 
