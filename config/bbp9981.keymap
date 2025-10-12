@@ -46,6 +46,16 @@
         };
     };
 
+   //切换蓝牙设备
+    behaviors {
+        btswitch: tap_dance_btswitch {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&tobt0>, <&tobt1>;
+        };
+    };
+
     macros {
         //切换设备1
         tobt0: zed_em_tobt0 {
@@ -148,8 +158,8 @@
         upper_layer {
 
             bindings = <
-                 &tobt0                                                                                       &tobt1
-    &kp LC(T)            &kp LC(R)                             &kp LC(W)                              &kp LA(LEFT)                     &kp LA(F4)
+                 &kp LA(LEFT)                                                                                       &kp LA(RIGHT)
+    &kp LC(T)            &kp LC(R)                             &btswitch                              &bhm LC(W)                     &kp LA(F4)
     &none        &kp UP     &none       &none           &none             &none            &none            &none          &none         &none
     &kp LEFT     &kp DOWN   &kp RIGHT   &none           &kp BSLH          &none            &none            &none          &none         &kp DEL
     &kp LSHFT    &none      &none       &none           &none             &none            &none            &none          &none         &none
@@ -170,6 +180,7 @@
         };
     };
 };
+
 
 
 
