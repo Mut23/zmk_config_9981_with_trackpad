@@ -45,25 +45,25 @@
         tocloseapp1: zed_em_closeapp1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp F4>,<&macro_tap &kp E>;
+            bindings = <&macro_press &kp F4>,<&macro_tap &kp E>,<&macro_release &kp F4>;
         }; 
         //关闭app2
         tocloseapp2: zed_em_closeapp2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp F4>,<&macro_tap &kp R>;
+            bindings = <&macro_press &kp F4>,<&macro_tap &kp R>,<&macro_release &kp F4>;
         }; 
         //关闭app3
         tocloseapp3: zed_em_closeapp3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp F4>,<&macro_tap &kp D>;
+            bindings = <&macro_press &kp F4>,<&macro_tap &kp D>,<&macro_release &kp F4>;
         }; 
         //关闭app4
         tocloseapp4: zed_em_closeapp4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp F4>,<&macro_tap &kp F>;
+            bindings = <&macro_press &kp F4>,<&macro_tap &kp F>,<&macro_release &kp F4>;
         }; 
         };
 
@@ -155,6 +155,7 @@
         };
     };
 };
+
 
 
 
