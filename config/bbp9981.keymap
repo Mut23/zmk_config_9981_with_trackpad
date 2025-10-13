@@ -119,7 +119,7 @@
         totapfirst: zed_em_totapfirst {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp TAB>,<&macro_tap &kp K>,<&macro_release &kp TAB>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp K>,<&macro_release &kp F3>;
         };
         //点击第三栏
         totapthird: zed_em_totapthird {
@@ -229,6 +229,7 @@
         };
     };
 };
+
 
 
 
