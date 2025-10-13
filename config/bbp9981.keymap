@@ -70,32 +70,32 @@
         toopenappT: zed_em_toopenappT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp TAB>,<&macro_tap &kp T>,<&macro_release &kp TAB>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp T>,<&macro_release &kp F3>;
         }; 
         //打开appY
         toopenappY: zed_em_toopenappY {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp TAB>,<&macro_tap &kp Y>,<&macro_release &kp TAB>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp Y>,<&macro_release &kp F3>;
         };
         //打开appU
         toopenappU: zed_em_toopenappU {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp TAB>,<&macro_tap &kp U>,<&macro_release &kp TAB>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp U>,<&macro_release &kp F3>;
         };
         //打开appX
         toopenappX: zed_em_toopenappX {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp TAB>,<&macro_tap &kp X>,<&macro_release &kp TAB>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp X>,<&macro_release &kp F3>;
         };
 
         //点击文字输入框
         totapinputbar: zed_em_totapinputbar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp TAB>,<&macro_tap &kp ENTER>,<&macro_release &kp TAB>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp ENTER>,<&macro_release &kp F3>;
         };
         //点击发送按钮
         totapsentbutton: zed_em_totapsentbutton {
@@ -107,7 +107,7 @@
         toscrollup: zed_em_toscrollup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp TAB>,<&macro_tap &kp SPACE>,<&macro_release &kp TAB>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp SPACE>,<&macro_release &kp F3>;
         };
         //向下滑动
         toscrolldown: zed_em_toscrolldown {
@@ -125,19 +125,19 @@
         totapthird: zed_em_totapthird {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp TAB>,<&macro_tap &kp L>,<&macro_release &kp TAB>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp L>,<&macro_release &kp F3>;
         };
         //点击第一条信息
         totaptopmsg: zed_em_totaptopmsg {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp TAB>,<&macro_tap &kp I>,<&macro_release &kp TAB>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp I>,<&macro_release &kp F3>;
         };
         //点击内部信息
         totapinnermsg: zed_em_totapinnermsg {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp TAB>,<&macro_tap &kp O>,<&macro_release &kp TAB>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp O>,<&macro_release &kp F3>;
         };
         };
 
@@ -195,7 +195,7 @@
 //        -----------------------------------------------------------------------------------------------------------------
 
                  &mkp LCLK                                                                                          &kp TAB
-    &toscrollup                 &toscrolldown                            &mkp LCLK                          &mt ESC K_BACK                    &mkp RCLK
+    &toscrolldown                 &toscrollup                            &mkp LCLK                          &mt ESC K_BACK                    &mkp RCLK
     &kp Q        &kp W      &kp E       &kp R     &kp T         &kp Y             &kp U            &kp I            &kp O            &kp P
     &kp A        &kp S      &kp D       &kp F     &kp G         &kp H             &kp J            &kp K            &kp L            &kp BSPC
     &kp LSHFT    &kp Z      &kp X       &kp C     &kp V         &kp B             &kp N            &kp M            &tdc_to_SYM      &kp ENTER
@@ -229,6 +229,7 @@
         };
     };
 };
+
 
 
 
