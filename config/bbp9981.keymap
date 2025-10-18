@@ -103,7 +103,72 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp F3>,<&macro_tap &kp X>,<&macro_release &kp F3>;
         };
-
+        //打开appZ
+        toopenappZ: zed_em_toopenappZ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp Z>,<&macro_release &kp F3>;
+        };
+        //打开appC
+        toopenappC: zed_em_toopenappC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp C>,<&macro_release &kp F3>;
+        };
+        //打开appG
+        toopenappG: zed_em_toopenappG {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp G>,<&macro_release &kp F3>;
+        };
+        //打开appV
+        toopenappV: zed_em_toopenappV {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp V>,<&macro_release &kp F3>;
+        };
+        //打开appH
+        toopenappH: zed_em_toopenappH {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp H>,<&macro_release &kp F3>;
+        };
+        //打开appB
+        toopenappB: zed_em_toopenappB {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp B>,<&macro_release &kp F3>;
+        };
+        //打开appJ
+        toopenappJ: zed_em_toopenappJ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp J>,<&macro_release &kp F3>;
+        };
+        //打开appN
+        toopenappN: zed_em_toopenappN {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp N>,<&macro_release &kp F3>;
+        };
+        //打开appI
+        toopenappI: zed_em_toopenappI {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp I>,<&macro_release &kp F3>;
+        };
+        //打开appM
+        toopenappM: zed_em_toopenappM {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp M>,<&macro_release &kp F3>;
+        };
+        //打开appP
+        toopenappP: zed_em_toopenappP {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp P>,<&macro_release &kp F3>;
+        };
         //点击文字输入框
         totapinputbar: zed_em_totapinputbar {
             compatible = "zmk,behavior-macro";
@@ -153,13 +218,13 @@
             bindings = <&macro_press &kp F3>,<&macro_tap &kp L>,<&macro_release &kp F3>;
         };
         //点击第一条信息
-        totaptopmsg: zed_em_totaptopmsg {
+        toreadwxmsg: zed_em_toreadwxmsg {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp I>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F5>,<&macro_tap &kp SPACE>,<&macro_release &kp F5>;
         };
-        //点击内部信息
-        totapinnermsg: zed_em_totapinnermsg {
+        //下拉控制栏
+        torolltoolpanel: zed_em_torolltoolpanel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp F3>,<&macro_tap &kp O>,<&macro_release &kp F3>;
@@ -239,7 +304,7 @@
 //        |         aA     |         0           |           SPACE              |         SYM         |        aA          |       
 //        -----------------------------------------------------------------------------------------------------------------
 
-                 &mkp LCLK                                                                                          &totaptopmsg
+                 &mkp LCLK                                                                                          &toreadwxmsg
     &gswitch1                 &gswitch2                            &mkp LCLK                          &mt ESC K_BACK                    &mkp RCLK
     &kp Q        &kp W      &kp E       &kp R     &kp T         &kp Y             &kp U            &kp I            &kp O            &kp P
     &kp A        &kp S      &kp D       &kp F     &kp G         &kp H             &kp J            &kp K            &kp L            &kp BSPC
@@ -266,14 +331,15 @@
             bindings = <
                  &winieback                                                                                       &winieforward
     &kp LC(T)            &kp LC(R)                             &btswitch                              &kp LC(W)                     &kp LA(F4)
-    &kp UP       &kp DOWN     &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &totaptopmsg   &totapinnermsg         &none
-    &kp LEFT     &kp RIGHT    &tocloseapp3     &tocloseapp4           &none               &none            &none            &totapfirst    &totapthird   &kp DEL
-    &kp LSHFT    &none        &toopenappX      &none                  &none               &none            &none            &none          &kp CLCK      &totapsentbutton
+    &kp UP       &kp DOWN           &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &torolltoolpanel         &toopenappP
+    &kp LEFT     &kp RIGHT          &tocloseapp3     &tocloseapp4           &toopenappG         &toopenappH      &toopenappJ      &totapfirst     &totapthird              &kp DEL
+    &kp LSHFT    &toopenappZ        &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &kp CLCK                 &totapsentbutton
     &kp LCTRL               &kp LALT                                 &msc SCRL_DOWN                        &to DEFAULT                      &to DEFAULT
             >;
         };
     };
 };
+
 
 
 
