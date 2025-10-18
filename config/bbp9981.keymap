@@ -41,6 +41,13 @@
             bindings = <&macro_tap &bt BT_SEL 1>,<&macro_tap &to DEFAULT>;
         }; 
 
+        //浏览器返回
+        winieback: zed_em_winieback {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>,<&macro_tap &kp LEFT>,<&macro_release &kp LALT>;
+        };
+
         //关闭app1
         tocloseapp1: zed_em_closeapp1 {
             compatible = "zmk,behavior-macro";
@@ -251,7 +258,7 @@
         upper_layer {
 
             bindings = <
-                 &kp LA(LEFT)                                                                                       &kp LA(RIGHT)
+                 &winieback                                                                                       &kp LA(RIGHT)
     &kp LC(T)            &kp LC(R)                             &btswitch                              &kp LC(W)                     &kp LA(F4)
     &kp UP       &kp DOWN     &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &totaptopmsg   &totapinnermsg         &none
     &kp LEFT     &kp RIGHT    &tocloseapp3     &tocloseapp4           &none               &none            &none            &totapfirst    &totapthird   &kp DEL
@@ -261,6 +268,7 @@
         };
     };
 };
+
 
 
 
