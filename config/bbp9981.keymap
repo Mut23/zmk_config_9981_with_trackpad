@@ -190,6 +190,16 @@
             bindings = <&toscrollleft>, <&toscrolldown>;
         };
     };
+
+   //切换up或右
+    behaviors {
+        gswitch2: hold_tap_gtswitch2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&toscrollright>, <&toscrollup>;
+        };
+    };
     
     behaviors {
     sl_mo: behavior_sl_mo {
@@ -217,7 +227,7 @@
 //        -----------------------------------------------------------------------------------------------------------------
 
                  &mkp LCLK                                                                                          &kp TAB
-    &gswitch1                 &toscrollup                            &mkp LCLK                          &mt ESC K_BACK                    &mkp RCLK
+    &gswitch1                 &gswitch1                            &mkp LCLK                          &mt ESC K_BACK                    &mkp RCLK
     &kp Q        &kp W      &kp E       &kp R     &kp T         &kp Y             &kp U            &kp I            &kp O            &kp P
     &kp A        &kp S      &kp D       &kp F     &kp G         &kp H             &kp J            &kp K            &kp L            &kp BSPC
     &kp LSHFT    &kp Z      &kp X       &kp C     &kp V         &kp B             &kp N            &kp M            &tdc_to_SYM      &kp ENTER
@@ -251,6 +261,7 @@
         };
     };
 };
+
 
 
 
