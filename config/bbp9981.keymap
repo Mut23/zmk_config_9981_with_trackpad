@@ -183,21 +183,21 @@
 
    //切换down或左
     behaviors {
-        gswitch1: hold_tap_gtswitch1 {
+        gswitch1: hold_tap_gswitch1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&toscrollleft>, <&toscrolldown>;
+            bindings = <&toscrolldown>, <&toscrollleft>;
         };
     };
 
    //切换up或右
     behaviors {
-        gswitch2: hold_tap_gtswitch2 {
+        gswitch2: hold_tap_gswitch2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&toscrollright>, <&toscrollup>;
+            bindings = <&toscrollup>, <&toscrollright>;
         };
     };
     
@@ -261,6 +261,7 @@
         };
     };
 };
+
 
 
 
