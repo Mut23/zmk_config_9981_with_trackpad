@@ -169,6 +169,24 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp F3>,<&macro_tap &kp P>,<&macro_release &kp F3>;
         };
+        //打开appO
+        toopenappO: zed_em_toopenappO {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp O>,<&macro_release &kp F3>;
+        };
+        //打开appK
+        toopenappK: zed_em_toopenappK {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp K>,<&macro_release &kp F3>;
+        };
+        //打开appL
+        toopenappL: zed_em_toopenappL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp L>,<&macro_release &kp F3>;
+        };
         //点击文字输入框
         totapinputbar: zed_em_totapinputbar {
             compatible = "zmk,behavior-macro";
@@ -209,13 +227,13 @@
         totapfirst: zed_em_totapfirst {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp K>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F8>,<&macro_tap &kp SPACE>,<&macro_release &kp F8>;
         };
         //点击第三栏
         totapthird: zed_em_totapthird {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp L>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F9>,<&macro_tap &kp SPACE>,<&macro_release &kp F9>;
         };
         //读微信最新的信息
         toreadwxmsg: zed_em_toreadwxmsg {
@@ -233,7 +251,7 @@
         torolltoolpanel: zed_em_torolltoolpanel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp O>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F7>,<&macro_tap &kp SPACE>,<&macro_release &kp F7>;
         };
         };
 
@@ -346,14 +364,15 @@
             bindings = <
                  &winieback                                                                                       &winieforward
     &kp LC(T)            &kp LC(R)                             &btswitch                              &kp LC(W)                     &kp LA(F4)
-    &kp UP       &kp DOWN           &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &torolltoolpanel         &toopenappP
-    &kp LEFT     &kp RIGHT          &tocloseapp3     &tocloseapp4           &toopenappG         &toopenappH      &toopenappJ      &totapfirst     &totapthird              &kp DEL
-    &kp LSHFT    &toopenappZ        &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &kp CLCK                 &totapsentbutton
-    &kp LCTRL               &kp LALT                                 &msc SCRL_DOWN                        &to DEFAULT                      &to DEFAULT
+    &kp UP              &kp DOWN           &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
+    &kp LEFT            &kp RIGHT          &tocloseapp3     &tocloseapp4           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &kp DEL
+    &torolltoolpanel    &toopenappZ        &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &kp CLCK            &totapsentbutton
+    &totapfirst            &totapthird                              &msc SCRL_DOWN                        &to DEFAULT                      &to DEFAULT
             >;
         };
     };
 };
+
 
 
 
