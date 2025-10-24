@@ -19,7 +19,7 @@
 #define UPPER 2
 
 #define SL_MO(layer) &sl_mo layer layer //tap -> sticky layer, hold -> momentary layer
-#define KEY_App(keyname) &key_app keyname keyname
+#define KEY_App(appname,keyname) &key_app appname keyname
 
 &sl {
     release-after-ms = <3000>;
@@ -329,7 +329,7 @@
         #binding-cells = <2>;
         flavor = "hold-preferred";      
         tapping-term-ms = <450>;       
-        bindings = <&app &key>;
+        bindings = <&appname &keyname>;
         };
     };
 
@@ -383,6 +383,7 @@
         };
     };
 };
+
 
 
 
