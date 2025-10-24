@@ -328,7 +328,7 @@
         #binding-cells = <2>;
         flavor = "hold-preferred";      
         tapping-term-ms = <450>;       
-        bindings = <&toopenappU &kp U>;
+        bindings = <&toopenappU>,<&kp U>;
         };
     };
 
@@ -382,6 +382,7 @@
         };
     };
 };
+
 
 
 
