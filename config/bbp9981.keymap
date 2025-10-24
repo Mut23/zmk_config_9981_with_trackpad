@@ -328,7 +328,7 @@
         #binding-cells = <2>;
         flavor = "hold-preferred";      
         tapping-term-ms = <450>;       
-        bindings = <&toopenappU>,<&kp U>;
+        bindings = <&toopenappU>,<&kp>;
         };
     };
 
@@ -349,7 +349,7 @@
 
                  &mkp LCLK                                                                                          &readwxmsgandmore
     &gswitch1                 &gswitch2                            &mkp LCLK                          &mt ESC K_BACK                    &mkp RCLK
-    &kp Q        &kp W      &kp E       &kp R     &kp T         &kp Y             &key_app         &kp I            &kp O            &kp P
+    &kp Q        &kp W      &kp E       &kp R     &kp T         &kp Y             &key_app U toopenappU        &kp I            &kp O            &kp P
     &kp A        &kp S      &kp D       &kp F     &kp G         &kp H             &kp J            &kp K            &kp L            &kp BSPC
     &kp LSHFT    &kp Z      &kp X       &kp C     &kp V         &kp B             &kp N            &kp M            &tdc_to_SYM      &kp ENTER
     &kp LCTRL               &mt N0 LALT                         &kp SPACE                          &sl_mo 1 1                        &sl_mo 2 2
@@ -382,6 +382,7 @@
         };
     };
 };
+
 
 
 
