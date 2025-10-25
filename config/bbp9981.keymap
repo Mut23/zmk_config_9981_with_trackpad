@@ -324,11 +324,20 @@
     };
 
     behaviors {
-        tdc_to_MEDIA: td_capslock_to_layer {
+        tdc_to_MEDIA: td_rclk_to_medialayer {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&kp CLCK>, <&to MEDIA>;
+            bindings = <&mkp RCLK>, <&to MEDIA>;
+        };
+    };
+
+    behaviors {
+        tdc_to_DEFAULT: td_rclk_to_defaultlayer {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&toscrollleft>, <&to DEFAULT>;
         };
     };
 
@@ -347,7 +356,7 @@
 //        |         aA     |         0           |           SPACE              |         SYM         |        aA          |       
 //        -----------------------------------------------------------------------------------------------------------------
 
-                 &mkp LCLK                                                                                          &mkp RCLK
+                 &mkp LCLK                                                                                          &tdc_to_MEDIA
     &gswitch1                 &gswitch2                            &mkp LCLK                          &mt ESC K_BACK                    &readwxmsgandmore
     &kp Q        &kp W      &kp E       &kp R     &kp T         &kp Y             &kp U            &kp I            &kp O            &kp P
     &kp A        &kp S      &kp D       &kp F     &kp G         &kp H             &kp J            &kp K            &kp L            &kp BSPC
@@ -376,7 +385,7 @@
     &kp LC(T)            &kp LC(R)                             &btswitch                              &kp LC(W)                     &kp LA(F4)
     &kp UP              &kp DOWN           &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
     &kp LEFT            &kp RIGHT          &tocloseapp3     &tocloseapp4           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &kp DEL
-    &torolltoolpanel    &toopenappZ        &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &tdc_to_MEDIA       &totapsentbutton
+    &torolltoolpanel    &toopenappZ        &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &kp CLCK            &totapsentbutton
     &totapfirst            &totapthird                              &msc SCRL_DOWN                        &to DEFAULT                      &to DEFAULT
             >;
         };
@@ -384,16 +393,17 @@
         media_layer {
 
             bindings = <                 
-                   &toscrollright                                                                                          &toscrollleft
+                   &toscrollright                                                                                          &tdc_to_DEFAULT
            &toscrolldown                 &toscrollup                   &mkp LCLK                          &mt ESC K_BACK                    &readwxmsgandmore
   &kp UP              &kp DOWN           &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
   &kp LEFT            &kp RIGHT          &tocloseapp3     &tocloseapp4           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &totapinputbar
-  &torolltoolpanel    &toopenappZ        &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &to DEFAULT         &totapsentbutton
+  &torolltoolpanel    &toopenappZ        &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &kp CLCK            &totapsentbutton
   &totapfirst                  &totapthird                               &mkp LCLK                         &msc SCRL_UP                      &msc SCRL_DOWN
             >;
         };
     };
 };
+
 
 
 
