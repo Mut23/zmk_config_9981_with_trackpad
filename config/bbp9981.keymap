@@ -17,6 +17,7 @@
 #define DEFAULT 0
 #define SYM 1
 #define UPPER 2
+#define MEDIA 3
 
 #define SL_MO(layer) &sl_mo layer layer //tap -> sticky layer, hold -> momentary layer
 
@@ -322,6 +323,15 @@
         };
     };
 
+    behaviors {
+        tdc_to_MEDIA: td_capslock_to_layer {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&kp CLCK>, <&to MEDIA>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -366,12 +376,25 @@
     &kp LC(T)            &kp LC(R)                             &btswitch                              &kp LC(W)                     &kp LA(F4)
     &kp UP              &kp DOWN           &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
     &kp LEFT            &kp RIGHT          &tocloseapp3     &tocloseapp4           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &kp DEL
-    &torolltoolpanel    &toopenappZ        &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &kp CLCK            &totapsentbutton
+    &torolltoolpanel    &toopenappZ        &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &tdc_to_MEDIA       &totapsentbutton
     &totapfirst            &totapthird                              &msc SCRL_DOWN                        &to DEFAULT                      &to DEFAULT
+            >;
+        };
+
+        media_layer {
+
+            bindings = <                 
+                   &mkp LCLK                                                                                          &readwxmsgandmore
+           &gswitch1                 &gswitch2                   &mkp LCLK                          &mt ESC K_BACK                    &mkp RCLK
+  &kp UP              &kp DOWN           &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
+  &kp LEFT            &kp RIGHT          &tocloseapp3     &tocloseapp4           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &totapinputbar
+  &torolltoolpanel    &toopenappZ        &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &to DEFAULT         &totapsentbutton
+  &totapfirst                  &totapthird                               &mkp LCLK                         &msc SCRL_UP                      &msc SCRL_DOWN
             >;
         };
     };
 };
+
 
 
 
