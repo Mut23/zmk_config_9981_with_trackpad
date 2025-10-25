@@ -63,7 +63,7 @@ static void set_led_brightness(uint8_t level) {
 
 /* 层1/层3闪烁 */
 static void blink_work_handler(struct k_work *work) {
-    if (prev_layer != 1 && prev_layer != 3) {
+    if (prev_layer != 1) {
         set_led_brightness(0);
         return;
     }
@@ -146,13 +146,6 @@ static void polling_work_handler(struct k_work *work) {
         case 2:
             /* 层2：始终呼吸 */
             k_work_reschedule(&cycle_work, K_MSEC(100));
-            break;
-
-        case 3:
-            /* 层3：更快的闪烁 */
-            blink_on = false;
-            set_led_brightness(BRT_BLINK_LOW);
-            k_work_reschedule(&blink_work, K_MSEC(BLINK_INTERVAL_MS / 2));
             break;
 
         default:
