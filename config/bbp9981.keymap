@@ -347,8 +347,8 @@
 //        |         aA     |         0           |           SPACE              |         SYM         |        aA          |       
 //        -----------------------------------------------------------------------------------------------------------------
 
-                 &mkp LCLK                                                                                          &readwxmsgandmore
-    &gswitch1                 &gswitch2                            &mkp LCLK                          &mt ESC K_BACK                    &mkp RCLK
+                 &mkp LCLK                                                                                          &mkp RCLK
+    &gswitch1                 &gswitch2                            &mkp LCLK                          &mt ESC K_BACK                    &readwxmsgandmore
     &kp Q        &kp W      &kp E       &kp R     &kp T         &kp Y             &kp U            &kp I            &kp O            &kp P
     &kp A        &kp S      &kp D       &kp F     &kp G         &kp H             &kp J            &kp K            &kp L            &kp BSPC
     &kp LSHFT    &kp Z      &kp X       &kp C     &kp V         &kp B             &kp N            &kp M            &tdc_to_SYM      &kp ENTER
@@ -384,8 +384,8 @@
         media_layer {
 
             bindings = <                 
-                   &mkp LCLK                                                                                          &readwxmsgandmore
-           &gswitch1                 &gswitch2                   &mkp LCLK                          &mt ESC K_BACK                    &mkp RCLK
+                   &mkp LCLK                                                                                          &mkp RCLK
+           &gswitch1                 &gswitch2                   &mkp LCLK                          &mt ESC K_BACK                    &readwxmsgandmore
   &kp UP              &kp DOWN           &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
   &kp LEFT            &kp RIGHT          &tocloseapp3     &tocloseapp4           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &totapinputbar
   &torolltoolpanel    &toopenappZ        &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &to DEFAULT         &totapsentbutton
@@ -394,6 +394,7 @@
         };
     };
 };
+
 
 
 
