@@ -230,11 +230,23 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp F8>,<&macro_tap &kp SPACE>,<&macro_release &kp F8>;
         };
+        //点击第二栏
+        totapsecond: zed_em_totapsecond {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F10>,<&macro_tap &kp SPACE>,<&macro_release &kp F10>;
+        };
         //点击第三栏
         totapthird: zed_em_totapthird {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp F9>,<&macro_tap &kp SPACE>,<&macro_release &kp F9>;
+        };
+        //点击第四栏
+        totapforth: zed_em_totapforth {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F11>,<&macro_tap &kp SPACE>,<&macro_release &kp F11>;
         };
         //读微信最新的信息
         toreadwxmsg: zed_em_toreadwxmsg {
@@ -337,7 +349,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&toscrollleft>, <&to DEFAULT>;
+            bindings = <&toscrollright>, <&to DEFAULT>;
         };
     };
 
@@ -374,7 +386,7 @@
     &kp HASH     &kp N1     &kp N2      &kp N3    &mt LBKT LPAR      &mt RBKT RPAR     &kp UNDER        &kp MINUS        &kp PLUS         &kp AT
     &kp STAR     &kp N4     &kp N5      &kp N6    &mt BSLH SLASH     &kp COLON         &kp SEMI         &kp APOS         &kp DQT          &kp BSPC
     &kp LSHFT    &kp N7     &kp N8      &kp N9    &kp QMARK          &kp EXCL          &kp COMMA        &kp DOT          &mt C_MUTE DLLR  &totapinputbar
-    &kp LCTRL               &kp N0                              &msc SCRL_UP                          &to DEFAULT                       &sl_mo 2 2
+    &kp LCTRL               &kp N0                              &kp SPACE                          &to DEFAULT                       &sl_mo 2 2
             >;
         };
 
@@ -383,26 +395,27 @@
             bindings = <
                  &winieback                                                                                       &winieforward
     &kp LC(T)            &kp LC(R)                             &btswitch                              &kp LC(W)                     &kp LA(F4)
-    &kp UP              &kp DOWN           &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
-    &kp LEFT            &kp RIGHT          &tocloseapp3     &tocloseapp4           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &kp DEL
-    &torolltoolpanel    &toopenappZ        &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &kp CLCK            &totapsentbutton
-    &totapfirst            &totapthird                              &msc SCRL_DOWN                        &to DEFAULT                      &to DEFAULT
+    &totapfirst          &totapsecond         &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
+    &totapthird          &totapforth          &tocloseapp3     &tocloseapp4           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &kp DEL
+    &torolltoolpanel     &toopenappZ          &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &kp CLCK            &totapsentbutton
+    &msc SCRL_UP                      &msc SCRL_DOWN                       &kp SPACE                        &to DEFAULT                      &to DEFAULT
             >;
         };
 
         media_layer {
 
             bindings = <                 
-                   &toscrollright                                                                                          &tdc_to_DEFAULT
+                   &toscrollleft                                                                                          &tdc_to_DEFAULT
            &toscrolldown                 &toscrollup                   &mkp LCLK                          &mt ESC K_BACK                    &readwxmsgandmore
-  &kp UP              &kp DOWN           &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
-  &kp LEFT            &kp RIGHT          &tocloseapp3     &tocloseapp4           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &totapinputbar
-  &torolltoolpanel    &toopenappZ        &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &kp CLCK            &totapsentbutton
-  &totapfirst                  &totapthird                               &mkp LCLK                         &msc SCRL_UP                      &msc SCRL_DOWN
+  &totapfirst          &totapsecond          &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
+  &totapthird          &totapforth           &tocloseapp3     &tocloseapp4           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &totapinputbar
+  &torolltoolpanel    &toopenappZ            &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &kp CLCK            &totapsentbutton
+  &msc SCRL_UP                      &msc SCRL_DOWN                             &mkp LCLK                         &kp UP                      &kp DOWN
             >;
         };
     };
 };
+
 
 
 
