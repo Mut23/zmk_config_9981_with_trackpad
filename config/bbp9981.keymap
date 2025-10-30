@@ -351,11 +351,11 @@
     };
 
     behaviors {
-        tdc_to_DEFAULT: td_rclk_to_defaultlayer {
+        tdc_leftorright: td_lclk_leftorright {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
-            bindings = <&toscrollright>, <&to DEFAULT>;
+            tapping-term-ms = <300>;
+            bindings = <&toscrollright>, <&toscrollleft>;
         };
     };
 
@@ -383,7 +383,7 @@
 //        |         aA     |         0           |           SPACE              |         SYM         |        aA          |       
 //        -----------------------------------------------------------------------------------------------------------------
 
-                 &mkp LCLK                                                                                          &tdc_to_MEDIA
+                 &mkp LCLK                                                                                          &to MEDIA
     &gswitch1                 &gswitch2                            &mkp LCLK                          &mt ESC K_BACK                    &readwxmsgandmore
     &kp Q        &kp W      &kp E       &kp R     &kp T         &kp Y             &kp U            &kp I            &kp O            &kp P
     &kp A        &kp S      &kp D       &kp F     &kp G         &kp H             &kp J            &kp K            &kp L            &kp BSPC
@@ -420,7 +420,7 @@
         media_layer {
 
             bindings = <                 
-                   &toscrollleft                                                                                          &tdc_to_DEFAULT
+                   &tdc_leftorright                                                                                          &to DEFAULT
            &toscrolldown                 &toscrollup                   &mkp LCLK                          &mt ESC K_BACK                    &readwxmsgandmore
   &totapfirst          &totapsecond          &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
   &totapthird          &totapforth           &tocloseapp3     &tocloseapp4           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &totapinputbar
@@ -430,6 +430,7 @@
         };
     };
 };
+
 
 
 
