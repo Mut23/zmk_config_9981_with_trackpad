@@ -188,6 +188,30 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp F3>,<&macro_tap &kp L>,<&macro_release &kp F3>;
         };
+        //打开appE
+        toopenappE: zed_em_toopenappE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp E>,<&macro_release &kp F3>;
+        };
+        //打开appR
+        toopenappR: zed_em_toopenappR {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp R>,<&macro_release &kp F3>;
+        };
+        //打开appD
+        toopenappD: zed_em_toopenappD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp D>,<&macro_release &kp F3>;
+        };
+        //打开appF
+        toopenappF: zed_em_toopenappF {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp F>,<&macro_release &kp F3>;
+        };
         //点击文字输入框
         totapinputbar: zed_em_totapinputbar {
             compatible = "zmk,behavior-macro";
@@ -427,10 +451,10 @@
 
             bindings = <
                  &winieback                                                                                       &winieforward
-    &kp LC(T)            &kp LC(R)                             &btswitch                              &kp LC(W)                     &kp LA(F4)
-    &totapfirst          &totapsecond         &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
-    &totapthird          &totapforth          &tocloseapp3     &tocloseapp4           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &kp DEL
-    &tdc_rollpanel       &toopenappZ          &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &kp CLCK            &kp ENTER
+    &kp LC(T)            &kp LC(R)                             &mkp LCLK                              &kp LC(W)                     &kp LA(F4)
+    &&kp LGUI      &none         &none         &none           &none         &none         &none        &none             &none         &mkp RCLK
+    &none          &none         &none         &none           &none         &none         &none        &none             &none         &kp LA(TAB)
+    &none          &none         &none         &none           &none         &none         &none        &kp LGUI(M)       &kp CLCK      &btswitch
     &msc SCRL_UP                      &msc SCRL_DOWN                       &kp SPACE                        &to DEFAULT                      &to DEFAULT
             >;
         };
@@ -440,14 +464,15 @@
             bindings = <                 
                    &tdc_leftorright                                                                                          &to DEFAULT
            &toscrolldown                 &toscrollup                   &mkp LCLK                          &kp K_BACK                    &readwxmsgandmore
-  &totapfirst          &totapsecond          &tocloseapp1     &tocloseapp2           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
-  &totapthird          &totapforth           &tocloseapp3     &tocloseapp4           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &kp ESC
-  &tdc_rollpanel       &toopenappZ           &toopenappX      &toopenappC            &toopenappV         &toopenappB      &toopenappN      &toopenappM     &kp CLCK            &btswitch
+  &totapfirst          &totapsecond          &toopenappE     &toopenappR           &toopenappT         &toopenappY      &toopenappU      &tocloseapp1     &tocloseapp2         &toopenappP
+  &totapthird          &totapforth           &toopenappD     &toopenappF           &toopenappG         &toopenappH      &toopenappJ      &tocloseapp3     &tocloseapp4         &kp ESC
+  &tdc_rollpanel       &toopenappZ           &toopenappX     &toopenappC           &toopenappV         &toopenappB      &toopenappN      &toopenappM      &kp CLCK             &btswitch
   &msc SCRL_UP                      &msc SCRL_DOWN                             &mkp LCLK                         &mt UP LEFT                     &mt DOWN RIGHT
             >;
         };
     };
 };
+
 
 
 
