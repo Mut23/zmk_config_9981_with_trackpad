@@ -18,6 +18,7 @@
 #define SYM 1
 #define UPPER 2
 #define MEDIA 3
+#define KILL 4
 
 #define SL_MO(layer) &sl_mo layer layer //tap -> sticky layer, hold -> momentary layer
 
@@ -296,6 +297,12 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp F12>,<&macro_tap &kp SPACE>,<&macro_release &kp F12>;
         };
+
+        toappswitchandkill: zed_em_toappswitchandkill {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp ESC &sl_mo 4 4>;
+        };
         };
 
    //切换蓝牙设备
@@ -465,13 +472,27 @@
                    &tdc_leftorright                                                                                          &to DEFAULT
            &toscrolldown                 &toscrollup                   &mkp LCLK                          &kp K_BACK                    &readwxmsgandmore
   &totapfirst          &totapsecond          &toopenappE     &toopenappR           &toopenappT         &toopenappY      &toopenappU      &tocloseapp1     &tocloseapp2         &toopenappP
-  &totapthird          &totapforth           &toopenappD     &toopenappF           &toopenappG         &toopenappH      &toopenappJ      &tocloseapp3     &tocloseapp4         &kp ESC
+  &totapthird          &totapforth           &toopenappD     &toopenappF           &toopenappG         &toopenappH      &toopenappJ      &tocloseapp3     &tocloseapp4         &toappswitchandkill
   &tdc_rollpanel       &toopenappZ           &toopenappX     &toopenappC           &toopenappV         &toopenappB      &toopenappN      &toopenappM      &kp CLCK             &btswitch
   &msc SCRL_UP                      &msc SCRL_DOWN                             &mkp LCLK                         &mt UP LEFT                     &mt DOWN RIGHT
             >;
         };
+
+        kill_layer {
+
+            bindings = <
+                 &none                                                                                       &none
+    &tocloseapp1            &tocloseapp2                             &none                              &tocloseapp3                     &tocloseapp4
+    &none          &none         &none            &none           &none         &none            &none        &none             &none         &none
+    &none          &none         &none            &none           &none         &none            &none        &none             &none         &none
+    &none          &none         &none            &none           &none         &none            &none        &none             &none         &none
+    &none                      &none                       &none                        &none                      &none
+            >;
+        };
+
     };
 };
+
 
 
 
