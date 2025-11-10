@@ -14,10 +14,10 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define DEFAULT 0
+#define MEDIA 0
 #define SYM 1
 #define UPPER 2
-#define MEDIA 3
+#define DEFAULT 3
 #define KILL 4
 
 #define SL_MO(layer) &sl_mo layer layer //tap -> sticky layer, hold -> momentary layer
@@ -434,7 +434,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        media_layer {
 
             bindings = <
 // ------------------------------------------------------------------------------------------------------------------------------------------------         
@@ -445,13 +445,12 @@
 // |     alt    |     Z    |     X    |     C    |      V      |       B        |       N        |        M        |       $      |    Enter      |   
 //        |         aA     |         0           |           SPACE              |         SYM         |        aA          |       
 // ------------------------------------------------------------------------------------------------------------------------------------------------         
-
-                 &tdc_clickortapinput                                                                                          &tdc_tomediaortapsend
-    &gswitch1                 &gswitch2                            &mkp LCLK                          &mt ESC K_BACK                    &readwxmsgandmore
-    &kp Q        &kp W      &kp E       &kp R     &kp T         &kp Y             &kp U            &kp I            &kp O            &kp P
-    &kp A        &kp S      &kp D       &kp F     &kp G         &kp H             &kp J            &kp K            &kp L            &kp BSPC
-    &kp LSHFT    &kp Z      &kp X       &kp C     &kp V         &kp B             &kp N            &kp M            &kp SEMI         &kp ENTER
-    &kp LCTRL               &mt N0 LALT                         &kp SPACE                          &tdc_to_SYM                       &tdc_to_UPPER
+                   &tdc_leftorright                                                                                          &to DEFAULT
+           &toscrolldown                 &toscrollup                   &mkp LCLK                          &kp K_BACK                    &readwxmsgandmore
+  &totapfirst          &totapsecond          &toopenappE     &toopenappR           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
+  &totapthird          &totapforth           &toopenappD     &toopenappF           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &toappswitchandkill
+  &tdc_rollpanel       &toopenappZ           &toopenappX     &toopenappC           &toopenappV         &toopenappB      &toopenappN      &toopenappM     &kp CLCK            &btswitch
+  &msc SCRL_UP                      &msc SCRL_DOWN                             &mkp LCLK                         &mt UP LEFT                     &mt DOWN RIGHT
             >;
         };
 
@@ -480,15 +479,14 @@
             >;
         };
 
-        media_layer {
+        default_layer {
 
-            bindings = <                 
-                   &tdc_leftorright                                                                                          &to DEFAULT
-           &toscrolldown                 &toscrollup                   &mkp LCLK                          &kp K_BACK                    &readwxmsgandmore
-  &totapfirst          &totapsecond          &toopenappE     &toopenappR           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
-  &totapthird          &totapforth           &toopenappD     &toopenappF           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &toappswitchandkill
-  &tdc_rollpanel       &toopenappZ           &toopenappX     &toopenappC           &toopenappV         &toopenappB      &toopenappN      &toopenappM     &kp CLCK            &btswitch
-  &msc SCRL_UP                      &msc SCRL_DOWN                             &mkp LCLK                         &mt UP LEFT                     &mt DOWN RIGHT
+                 &tdc_clickortapinput                                                                                          &tdc_tomediaortapsend
+    &gswitch1                 &gswitch2                            &mkp LCLK                          &mt ESC K_BACK                    &readwxmsgandmore
+    &kp Q        &kp W      &kp E       &kp R     &kp T         &kp Y             &kp U            &kp I            &kp O            &kp P
+    &kp A        &kp S      &kp D       &kp F     &kp G         &kp H             &kp J            &kp K            &kp L            &kp BSPC
+    &kp LSHFT    &kp Z      &kp X       &kp C     &kp V         &kp B             &kp N            &kp M            &kp SEMI         &kp ENTER
+    &kp LCTRL               &mt N0 LALT                         &kp SPACE                          &tdc_to_SYM                       &tdc_to_UPPER
             >;
         };
 
@@ -506,6 +504,7 @@
 
     };
 };
+
 
 
 
