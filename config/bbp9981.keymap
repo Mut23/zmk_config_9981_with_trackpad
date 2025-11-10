@@ -15,9 +15,9 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define MEDIA 0
-#define SYM 1
-#define UPPER 2
-#define DEFAULT 3
+#define DEFAULT 1
+#define SYM 2
+#define UPPER 3
 #define KILL 4
 
 #define SL_MO(layer) &sl_mo layer layer //tap -> sticky layer, hold -> momentary layer
@@ -325,7 +325,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&sl_mo 1 1>, <&to SYM>;
+            bindings = <&sl_mo 2 2>, <&to SYM>;
         };
     };
 
@@ -334,7 +334,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&sl_mo 2 2>, <&to UPPER>;
+            bindings = <&sl_mo 3 3>, <&to UPPER>;
         };
     };
 
@@ -454,6 +454,17 @@
             >;
         };
 
+        default_layer {
+            bindings = <
+                 &tdc_clickortapinput                                                                                          &tdc_tomediaortapsend
+    &gswitch1                 &gswitch2                            &mkp LCLK                          &mt ESC K_BACK                    &readwxmsgandmore
+    &kp Q        &kp W      &kp E       &kp R     &kp T         &kp Y             &kp U            &kp I            &kp O            &kp P
+    &kp A        &kp S      &kp D       &kp F     &kp G         &kp H             &kp J            &kp K            &kp L            &kp BSPC
+    &kp LSHFT    &kp Z      &kp X       &kp C     &kp V         &kp B             &kp N            &kp M            &kp SEMI         &kp ENTER
+    &kp LCTRL               &mt N0 LALT                         &kp SPACE                          &tdc_to_SYM                       &tdc_to_UPPER
+            >;
+        };
+
         sym_layer {
             bindings = <        
                  &kp C_VOL_UP                                                                                       &kp C_VOL_DN
@@ -476,17 +487,6 @@
             >;
         };
 
-        default_layer {
-            bindings = <
-                 &tdc_clickortapinput                                                                                          &tdc_tomediaortapsend
-    &gswitch1                 &gswitch2                            &mkp LCLK                          &mt ESC K_BACK                    &readwxmsgandmore
-    &kp Q        &kp W      &kp E       &kp R     &kp T         &kp Y             &kp U            &kp I            &kp O            &kp P
-    &kp A        &kp S      &kp D       &kp F     &kp G         &kp H             &kp J            &kp K            &kp L            &kp BSPC
-    &kp LSHFT    &kp Z      &kp X       &kp C     &kp V         &kp B             &kp N            &kp M            &kp SEMI         &kp ENTER
-    &kp LCTRL               &mt N0 LALT                         &kp SPACE                          &tdc_to_SYM                       &tdc_to_UPPER
-            >;
-        };
-
         kill_layer {
             bindings = <
                  &none                                                                                       &none
@@ -500,6 +500,7 @@
 
     };
 };
+
 
 
 
