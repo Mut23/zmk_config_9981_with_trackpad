@@ -85,133 +85,133 @@
         toopenappT: zed_em_toopenappT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp T>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp T>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         }; 
         //打开appY
         toopenappY: zed_em_toopenappY {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp Y>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp Y>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appU
         toopenappU: zed_em_toopenappU {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp U>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp U>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appX
         toopenappX: zed_em_toopenappX {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp X>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp X>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appZ
         toopenappZ: zed_em_toopenappZ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp Z>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp Z>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appC
         toopenappC: zed_em_toopenappC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp C>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp C>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appG
         toopenappG: zed_em_toopenappG {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp G>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp G>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appV
         toopenappV: zed_em_toopenappV {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp V>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp V>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appH
         toopenappH: zed_em_toopenappH {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp H>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp H>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appB
         toopenappB: zed_em_toopenappB {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp B>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp B>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appJ
         toopenappJ: zed_em_toopenappJ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp J>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp J>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appN
         toopenappN: zed_em_toopenappN {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp N>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp N>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appI
         toopenappI: zed_em_toopenappI {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp I>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp I>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appM
         toopenappM: zed_em_toopenappM {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp M &to MEDIA>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp M &to MEDIA>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appP
         toopenappP: zed_em_toopenappP {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp P>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp P>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appO
         toopenappO: zed_em_toopenappO {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp O>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp O>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appK
         toopenappK: zed_em_toopenappK {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp K>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp K>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appL
         toopenappL: zed_em_toopenappL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp L>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp L>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appE
         toopenappE: zed_em_toopenappE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp E>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp E>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appR
         toopenappR: zed_em_toopenappR {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp R>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp R>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appD
         toopenappD: zed_em_toopenappD {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp D>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp D>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //打开appF
         toopenappF: zed_em_toopenappF {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp F3>,<&macro_tap &kp F>,<&macro_release &kp F3>;
+            bindings = <&macro_press &kp F3>,<&macro_tap &kp F>,<&macro_release &kp F3>,<&macro_tap &to MEDIA>;
         };
         //点击文字输入框
         totapinputbar: zed_em_totapinputbar {
@@ -430,7 +430,7 @@
            &toscrolldown                 &toscrollup                   &mkp LCLK                          &kp K_BACK                    &readwxmsgandmore
   &totapfirst          &totapsecond          &toopenappE     &toopenappR           &toopenappT         &toopenappY      &toopenappU      &toopenappI     &toopenappO         &toopenappP
   &totapthird          &totapforth           &toopenappD     &toopenappF           &toopenappG         &toopenappH      &toopenappJ      &toopenappK     &toopenappL         &toappswitchandkill
-  &tdc_rollpanel       &toopenappZ           &toopenappX     &toopenappC           &toopenappV         &toopenappB      &toopenappN      &toopenappM     &kp CLCK            &btswitch
+  &tdc_rollpanel       &toopenappZ           &toopenappX     &toopenappC           &toopenappV         &toopenappB      &none            &toopenappM     &kp CLCK            &btswitch
   &msc SCRL_UP                      &msc SCRL_DOWN                             &mkp LCLK                         &mt UP LEFT                     &mt DOWN RIGHT
             >;
         };
@@ -472,15 +472,16 @@
             bindings = <
                  &none                                                                                       &none
     &tocloseapp1            &tocloseapp3                             &backtomedia                              &tocloseapp2                     &tocloseapp4
-    &none          &none         &none            &none           &none         &none            &none        &none             &none         &none
-    &none          &none         &none            &none           &none         &none            &none        &none             &none         &toopenappM
-    &none          &none         &none            &none           &none         &none            &none        &none             &none         &none
+    &none          &none               &toopenappE     &toopenappR           &toopenappT         &toopenappY      &toopenappU      &toopenappI        &toopenappO         &none
+    &none          &none               &toopenappD     &toopenappF           &toopenappG         &toopenappH      &toopenappJ      &toopenappK        &toopenappL         &toopenappN
+    &none          &toopenappZ         &toopenappX     &toopenappC           &toopenappV         &toopenappB      &none      &toopenappM        &none               &none
     &none                      &none                       &none                        &none                      &none
             >;
         };
 
     };
 };
+
 
 
 
