@@ -87,7 +87,7 @@
             bindings = <&macro_press &kp F4>,<&macro_tap &kp W>,<&macro_release &kp F4>;
         }; 
         //关闭app6
-        tocloseapp5: zed_em_closeapp6 {
+        tocloseapp6: zed_em_closeapp6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp F4>,<&macro_tap &kp S>,<&macro_release &kp F4>;
@@ -493,6 +493,7 @@
 
     };
 };
+
 
 
 
